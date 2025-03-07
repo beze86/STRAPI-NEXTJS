@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2017", // Specify the target for newer syntax support.
+    "lib": ["dom", "dom.iterable", "esnext"], // Include DOM and modern ECMAScript library features.
+    "allowJs": true, // Use JavaScript alongside TypeScript when needed.
+    "skipLibCheck": true, // Skip checking declaration files for better performance.
+    "strict": true, // Enables strict type checking for better code quality.
+    "noEmit": true, // Prevent emitting compiled JavaScript files.
+    "esModuleInterop": true, // Interoperability between CommonJS and ES Modules.
+    "module": "esnext", // Use the latest ECMAScript module system.
+    "moduleResolution": "bundler", // Resolve modules for modern bundling strategies (like Next.js).
+    "resolveJsonModule": true, // Allow importing JSON files as modules.
+    "isolatedModules": true, // Ensure each file can be individually transpiled.
+    "jsx": "preserve", // Preserve JSX syntax for Next.js to transform it.
+    "incremental": true, // Enable incremental builds for faster type checking.
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file name casing across platform.
+    "strictNullChecks": true, // Ensure null and undefined are explicitly handled.
+    "strictFunctionTypes": true, // Detect mismatched function parameter types.
+    "noImplicitReturns": true, // Ensure all code paths return a value in functions.
+    "noFallthroughCasesInSwitch": true, // Prevent unintended fallthrough in switch statements.
+    "useUnknownInCatchVariables": true, // Type errors explicitly for catch variables.
+    "plugins": [
+      {
+        "name": "next" // Provide customized IntelliSense for Next.js projects.
+      }
+    ],
+    "paths": {
+      "@frontend/*": ["./src/*"] // Use '@frontend' as a more readable alias.
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts" // Automatically include Next.js generated .d.ts files.
+  ],
+  "exclude": [
+    "node_modules",
+    ".next", // Exclude built `.next` folder for clarity.
+    "dist", // If you use a custom build/output folder.
+    "out" // Exclude static export folder if used.
+  ]
+}
